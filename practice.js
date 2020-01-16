@@ -16,6 +16,13 @@
 
 //Code here
 
+me = {
+  name: 'Jess',
+  age: '34'
+}
+
+//window.alert(me.name)
+
 ////////// PROBLEM 2 //////////
 
 /*
@@ -24,6 +31,14 @@
 */
 
 //Code here
+let favoriteThings = {
+  band: 'gar',
+  food: 'blerg',
+  person: 'mer',
+  book: 'flerg',
+  movie: 'dar',
+  holiday: 'mor'
+}
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
@@ -31,14 +46,16 @@
 */
 
 //Code here
-
+favoriteThings.car = 'working' //dot notation
+favoriteThings['brand'] = 'any' //bracket notation
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
   and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 */
 
 //Code here
-
+favoriteThings.food = 'Chicken Nuggets'
+favoriteThings['book'] = 'Harry Potter'
 ////////// PROBLEM 3 //////////
 
 /*
@@ -50,13 +67,20 @@
 */
 
 //Code here
+let backPack = {}
+
+let item = 'firstPocket' 
+
+backPack[item] = 'chapstick'
+backPack.color = 'green'
+
 
 /*
   After you do the above, alert your entire backPack object.
 */
 
 //Code here
-
+// window.alert(backPack)
 /*
 You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
@@ -64,7 +88,7 @@ Instead, console.log your whole backPack object and then check out the console.
 */
 
 //Code here
-
+console.log(backPack)
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
@@ -85,6 +109,8 @@ var user2 = {
 */
 
 //Code Here
+user2.name = 'Bryan G. Smith'
+user2['email'] = 'bryan.smith@devmounta.in' 
 
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
@@ -96,7 +122,8 @@ var user2 = {
 */
 
 //Code Here
-
+var methodCollection = {
+}
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object.
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
@@ -104,12 +131,21 @@ var user2 = {
 
 //Code Here
 
+
+methodCollection.alertHello = function () {
+  window.alert('hello')
+}
+
+methodCollection['logHello'] = function () {
+  console.log('hello')
+}
 /*
   Now call your alertHello and logHello methods.
 */
 
 //Code Here
-
+methodCollection.alertHello
+methodCollection.logHello
 ////////// PROBLEM 6 //////////
 
 /*
@@ -118,6 +154,11 @@ var user2 = {
 */
 
 //Code Here
+function makePerson(name, birthday, ssn) {
+  return {name, birthday, ssn}
+}
+
+//He said a shortcut if the key and value was the same was to write it like that ^^
 
 ////////// PROBLEM 7 //////////
 
@@ -127,3 +168,8 @@ var user2 = {
 */
 
 //Code Here
+function makeCard(cardNumber, expirationDate, securityCode) {
+  return {cardNumber, expirationDate, securityCode}
+}
+
+//I'm not sure what skillset I'm supposed to be practicing on this one? I'm
